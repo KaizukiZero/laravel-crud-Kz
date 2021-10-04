@@ -55,8 +55,7 @@
 
                             <div class="ml-12">
                                 <div class="mt-2 text-gray-600 dark:text-gray-400 text-sm">
-                                    Laravel has wonderful, thorough documentation covering every aspect of the framework. Whether you are new to the framework or have previous experience with Laravel, we recommend reading all of the documentation from beginning to end.
-                                </div>
+Lorem ipsum dolor sit, amet consectetur adipisicing elit. Blanditiis dolorem incidunt exercitationem, sed aliquam nesciunt voluptate laboriosam ex delectus suscipit provident quibusdam unde expedita esse eveniet perspiciatis hic quos aliquid?                                </div>
                             </div>
                         </div>
 
