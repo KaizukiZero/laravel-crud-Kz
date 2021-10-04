@@ -3,7 +3,8 @@
 @section('Content')
 <div class="container my-4">
  <div class="border"> 
-    Hello Index
+ Hello World
+    {!! $data->links() !!} 
  </div>
 
 </div>
