@@ -1,0 +1,10 @@
+:root{
+    --blue: yellow;
+}
+
+
+h1{
+    color: var(--blue);
+    font-size: 10rem;
+}
+
