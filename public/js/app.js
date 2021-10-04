@@ -2074,9 +2074,11 @@ __webpack_require__(/*! ./main */ "./resources/js/main.js");
   \******************************/
 /***/ (() => {
 
-function Test() {
-  alert('Zero');
-}
+var btn = document.querySelector("button.mobile-menu-button");
+var menu = document.querySelector(".mobile-menu");
+btn.addEventListener("click", function () {
+  menu.classList.toggle("hidden");
+});
 
 /***/ }),
 
