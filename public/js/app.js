@@ -996,7 +996,7 @@ module.exports = function transformData(data, headers, fns) {
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 "use strict";
-/* provided dependency */ var process = __webpack_require__(/*! process/browser */ "./node_modules/process/browser.js");
+/* provided dependency */ var process = __webpack_require__(/*! process/browser.js */ "./node_modules/process/browser.js");
 
 
 var utils = __webpack_require__(/*! ./utils */ "./node_modules/axios/lib/utils.js");
@@ -2074,11 +2074,30 @@ __webpack_require__(/*! ./main */ "./resources/js/main.js");
   \******************************/
 /***/ (() => {
 
-var btn = document.querySelector("button.mobile-menu-button");
-var menu = document.querySelector(".mobile-menu");
-btn.addEventListener("click", function () {
-  menu.classList.toggle("hidden");
-});
+window.onload = function () {
+  var btn = document.querySelector("button.mobile-menu-button");
+  var menu = document.querySelector(".mobile-menu");
+  btn.addEventListener("click", function () {
+    menu.classList.toggle("hidden");
+  });
+  var modal = document.getElementById("my-modal");
+  var c_sm_show = document.getElementById("C-sm-show");
+  var c_xl_show = document.getElementById("C-xl-show");
+
+  window.onclick = function (event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  };
+
+  c_sm_show.onclick = function () {
+    modal.style.display = "block";
+  };
+
+  c_xl_show.onclick = function () {
+    modal.style.display = "block";
+  };
+};
 
 /***/ }),
 

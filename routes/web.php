@@ -14,4 +14,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/',[StockController::class,'index']);
+
+Route::get('/',[StockController::class,'index'])->name('index'); //! index page
+Route::get('/create',[StockController::class,'create_view'])->name('Create'); //! craete page
+Route::get('/edit',[StockController::class,'edit_view'])->name('Edit'); //! edit page
+Route::get('/show',[StockController::class,'data_view'])->name('Show'); //! show page
+
+Route::delete('/bye',[StockController::class,'destroy'])->name('Bye'); //! delete page
+
+
+
