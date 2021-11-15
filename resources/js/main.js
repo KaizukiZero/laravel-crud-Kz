@@ -1,30 +1,43 @@
-window.onload = function () {
-
-    const btn = document.querySelector("button.mobile-menu-button");
-    const menu = document.querySelector(".mobile-menu");
+window.onload = () => {
     
+    var btn = document.querySelector("button.mobile-menu-button");
+    var menu = document.querySelector(".mobile-menu");
+    var modal = document.getElementById("my-modal");
+    var modalopen = document.querySelectorAll(".modal-open");
+    var modalbody = document.getElementById("modal-body");
 
-    btn.addEventListener("click", () => {
-        menu.classList.toggle("hidden");
-    });
-
-    
-
-    const modal = document.getElementById("my-modal");
-    const c_sm_show = document.getElementById("C-sm-show");
-    const c_xl_show = document.getElementById("C-xl-show");
-
-    window.onclick = function (event) {
+    window.onclick = (event) => {
         if (event.target == modal) {
             modal.style.display = "none";
         }
     }
 
-    c_sm_show.onclick = function () {
-        modal.style.display = "block";
-    }
-    c_xl_show.onclick = function () {
-        modal.style.display = "block";
+
+    btn.addEventListener("click", () => {
+        menu.classList.toggle("hidden");
+    });
+
+
+
+    for (i = 0; i < modalopen.length; i++) {
+        modalopen[i].addEventListener('click', () => {
+            modal.style.display = "block";
+            create()
+        });
     }
 
+    function create() {
+        axios.get("/create").then(function (res) {
+            modalbody.innerHTML = res.data
+            const modalclose = modalbody.querySelectorAll(".modal-close");
+            
+            for (y = 0; y < modalclose.length; y++) {
+                modalclose[y].addEventListener('click', () => {
+                    modal.style.display = "none";
+                    create()
+                });
+            }
+
+        })
+    }
 }

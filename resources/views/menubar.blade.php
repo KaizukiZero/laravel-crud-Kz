@@ -16,8 +16,8 @@
 		                        class="py-4 px-2 text-bluegray border-b-4 border-bluegray font-semibold ">Home</a>
 
 		                    {{-- Should add auth --}}
-		                    <a id="C-xl-show" href="#"
-		                        class="py-4 px-2 text-gray-500 font-semibold hover:text-green-500 transition duration-300">Create</a>
+		                    <a id="create" href="#"
+		                        class="modal-open py-4 px-2 text-gray-500 font-semibold hover:text-green-500 transition duration-300">Create</a>
 
 		                    <a href=""
 		                        class="py-4 px-2 text-gray-500 font-semibold hover:text-green-500 transition duration-300">Contact
@@ -26,6 +26,7 @@
 		            </div>
 		            <!-- Secondary Navbar items -->
 		            <div class="hidden md:flex items-center space-x-3 ">
+
 		                <a href=""
 		                    class="py-2 px-2 font-medium text-gray-500 rounded hover:bg-green-500 hover:text-white transition duration-300">Log
 		                    In</a>
@@ -51,8 +52,8 @@
 		        <ul class="">
 		            <li class="active"><a href="/"
 		                    class="block text-sm px-2 py-4 text-white bg-green-500 font-semibold">Home</a></li>
-		            <li class=""><a id="C-sm-show" href="#"
-		                    class="block text-sm px-2 py-4 hover:bg-green-500 transition duration-300">Create</a></li>
+		            <li class=""><a id="create-mobile" href="#"
+		                    class="modal-open block text-sm px-2 py-4 hover:bg-green-500 transition duration-300">Create</a></li>
 		            <li class=""><a href="/contact"
 		                    class="block text-sm px-2 py-4 hover:bg-green-500 transition duration-300">Contact Us</a></li>
 		            <li>

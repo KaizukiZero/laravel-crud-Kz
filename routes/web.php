@@ -20,6 +20,8 @@ Route::get('/create',[StockController::class,'create_view'])->name('Create'); //
 Route::get('/edit',[StockController::class,'edit_view'])->name('Edit'); //! edit page
 Route::get('/show',[StockController::class,'data_view'])->name('Show'); //! show page
 
+Route::post('/creating',[StockController::class,'creating'])->name('Creating'); //! Post Create
+
 Route::delete('/bye',[StockController::class,'destroy'])->name('Bye'); //! delete page
 
 

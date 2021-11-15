@@ -14,11 +14,12 @@ class CreateStocksTable extends Migration
     public function up()
     {
         Schema::create('stocks', function (Blueprint $table) {
-            $table->id();
-            $table->string('name');
-            $table->tinyInteger('type');
-            $table->tinyInteger('amount');
-            $table->double('price',8,2);
+            $table->id('fd_id');
+            $table->string('fd_name');
+            $table->tinyInteger('fd_type');
+            $table->tinyInteger('fd_amount');
+            $table->tinyInteger('fd_amountbox');
+            $table->double('fd_pricebox',8,2);
             $table->timestamps();
         });
     }

@@ -11,8 +11,8 @@ class StockController extends Controller
     public function index()
     {
         $data = Stock::latest()->paginate(5);
-    
-        return view('index',compact('data'))
+
+        return view('index', compact('data'))
             ->with('i', (request()->input('page', 1) - 1) * 5);
     }
     //? action view
@@ -31,22 +31,31 @@ class StockController extends Controller
 
     //? action event
 
-    public function Create()
+    public function creating(Request $request)
     {
-        return view('path/create');
+        $data = array('fd_name' => "$request->nameprod"
+                    , "fd_type" => "$request->typeprod"
+                    , "fd_amount" => "$request->amountprod"
+                    , "fd_amountbox" => "$request->amountinbox"
+                    , "fd_pricebox" => "$request->priceprod");
+        Stock::create($data);
+
+        return redirect()->route('index')
+            ->with('success', 'สำเร็จ');
+
     }
     public function Edit()
     {
         return view('path/edit');
     }
 
-    //? delect data 
-    public function destroy(Post $post)
+    //? delect data
+    public function destroy(Stock $stock)
     {
-        $post->delete();
-    
+        $stock->delete();
+
         return redirect()->route('index')
-                         ->with('success','Post deleted successfully');
+            ->with('success', 'Post deleted successfully');
     }
 
 }

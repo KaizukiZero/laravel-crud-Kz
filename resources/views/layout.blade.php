@@ -9,7 +9,7 @@
     <script src="{{ asset('js/app.js') }}"></script>
 </head>
 <body>
-@include('menubar/menubar')
+@include('menubar')
 @yield('Content')
 @yield('Modal')
     

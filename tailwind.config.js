@@ -1,9 +1,12 @@
 module.exports = {
-  purge: [
-    './resources/views/*.blade.php',
-    './resources/js/*.js'
-  ],
-  darkMode: 'class', // or 'media' or 'class'
+  purge: {
+    enable:true,
+    content: [
+      './resources/views/*.blade.php',
+      './resources/js/*.js'
+    ],
+  },
+  darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
       container: {
@@ -33,3 +36,4 @@ module.exports = {
   },
   plugins: [],
 }
+
