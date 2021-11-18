@@ -12,8 +12,7 @@
         @endif
 
         <div class="overflow-x-auto">
-            <div
-                class="min-w-screen bg-gray-100 flex items-center justify-center bg-gray-100 font-sans overflow-hidden">
+            <div class="min-w-screen bg-gray-100 flex items-center justify-center font-sans overflow-hidden">
                 <div class="w-full lg:w-5/6">
                     <div class="bg-white shadow-md rounded my-6">
                         <table class="min-w-max w-full table-auto">
@@ -115,13 +114,13 @@
 @section('Modal')
 
 
-    <div class="fixed hidden inset-0 bg-gray-600 bg-opacity-50 overflow-y-auto h-full w-full" id="my-modal">
-        <div class="flex flex-col p-5 bg-white shadow-md hover:shodow-lg rounded-2xl mx-auto my-5 max-w-md">
-            <div class="mt-3">
-                <div id="modal-body"></div>
-            </div>
+<div class="fixed hidden inset-0 bg-gray-600 bg-opacity-50 overflow-y-auto h-full w-full" id="my-modal">
+    <div class="flex flex-col p-5 bg-white shadow-md hover:shodow-lg rounded-2xl mx-auto my-5 max-w-md">
+        <div class="mt-3">
+            <div id="modal-body"></div>
         </div>
     </div>
+</div>
 
 
 

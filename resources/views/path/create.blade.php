@@ -72,18 +72,6 @@
                 class="px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-200" 
                 autocomplete="off" step="2"/>
         </div>
-        {{-- <div class="flex flex-col">
-            <div class="my-2">
-
-                <label for="default" class="text-gray-700 mr-2 my-auto select-none font-medium">จำนวน</label>
-                <input id="default" type="text" name="default" placeholder="Placeholder"
-                    class="px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-200" />
-                <label for="default" class="text-gray-700 mr-2 my-auto select-none font-medium">ราคา</label>
-                <input id="default" type="text" name="default" placeholder="Placeholder"
-                    class="px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-200" />
-            </div>
-
-        </div> --}}
 
     </div>
 

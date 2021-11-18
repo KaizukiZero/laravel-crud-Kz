@@ -2,8 +2,6 @@
 @import "_var.css";
 @import "main.css";
 
-
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

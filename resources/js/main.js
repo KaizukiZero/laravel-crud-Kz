@@ -18,7 +18,7 @@ window.onload = () => {
     });
 
 
-
+    //AddEvent Click with all modal-open class
     for (i = 0; i < modalopen.length; i++) {
         modalopen[i].addEventListener('click', () => {
             modal.style.display = "block";
@@ -28,9 +28,12 @@ window.onload = () => {
 
     function create() {
         axios.get("/create").then(function (res) {
+            
             modalbody.innerHTML = res.data
+
             const modalclose = modalbody.querySelectorAll(".modal-close");
             
+            //AddEvent Click with all modal-close class
             for (y = 0; y < modalclose.length; y++) {
                 modalclose[y].addEventListener('click', () => {
                     modal.style.display = "none";
